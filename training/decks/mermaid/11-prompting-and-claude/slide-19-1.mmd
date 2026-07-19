@@ -1,0 +1,6 @@
+flowchart TD
+    subgraph HOST["Host application"]
+        M["The model"] --- C1["MCP Client"]
+    end
+    C1 <-->|"JSON-RPC over stdio<br/>or Streamable HTTP"| S1["MCP Server<br/>(your adapter)"]
+    S1 --- D1[("Your release DB")]

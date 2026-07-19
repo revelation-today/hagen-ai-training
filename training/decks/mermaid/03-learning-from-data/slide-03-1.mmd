@@ -1,0 +1,11 @@
+flowchart LR
+      subgraph TR["Traditional software"]
+        R1["Rules"] --> P1["Program"]
+        D1["Data"] --> P1
+        P1 --> A1["Answers"]
+      end
+      subgraph ML["Supervised ML"]
+        D2["Data (features)"] --> P2["Training"]
+        A2["Answers (labels)"] --> P2
+        P2 --> R2["Rules (the model)"]
+      end

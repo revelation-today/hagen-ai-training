@@ -1,0 +1,6 @@
+flowchart LR
+    x1["x1"] -->|w1| S
+    x2["x2"] -->|w2| S
+    x3["x3"] -->|w3| S
+    B["bias b"] --> S
+    S["sum: z = w1x1+w2x2+w3x3+b"] --> F["f(z) activation"] --> A["output a"]

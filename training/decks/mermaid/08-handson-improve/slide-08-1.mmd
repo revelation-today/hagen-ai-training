@@ -1,0 +1,7 @@
+flowchart TD
+    L{"Loss curve?"} -->|"spiky / NaN"| H["LR too HIGH → ÷3–10"]
+    L -->|"falls too slowly"| Lo["LR too LOW → ×3, or +epochs"]
+    L -->|"smooth then flat"| F{"Both plateau low?"}
+    F -->|Yes| UF["UNDERFIT → bigger net"]
+    F -->|"train≫val"| OF["OVERFIT → see slide 6"]
+    F -->|"both high"| OK["Good. Stop."]

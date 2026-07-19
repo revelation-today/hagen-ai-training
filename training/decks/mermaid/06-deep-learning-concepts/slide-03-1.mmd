@@ -1,0 +1,4 @@
+flowchart LR
+    C["Colour (255,255,204)"] --> N["Network 3->3->1"] --> P["0.57 = P(dark)"] --> D{">= 0.5?"}
+    D -->|yes| DARK["DARK text"]
+    D -->|no| LIGHT["LIGHT text"]

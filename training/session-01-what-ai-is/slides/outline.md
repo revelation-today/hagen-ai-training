@@ -10,7 +10,7 @@ Licence quick-reference for this deck:
 
 ## Slide 1 — Title
 
-- **On-slide text:** "What AI Is — and How It Relates to Human Thinking" · Session 1 of 15 · Block: *Understand it* · AI Training Series.
+- **On-slide text:** "What AI Is — and How It Relates to Human Thinking" · Session 1 of 16 · Block: *Understand it* · AI Training Series.
 - **Speaker notes:** Welcome. This is the conceptual opener — no jargon, no code. Two ideas: AI learns like we do, and it fails like we do. By the end you'll have the one mental model the rest of the course is built on.
 - **Visual:** Series title layout.
 - **Source/licence:** none.

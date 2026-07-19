@@ -28,7 +28,7 @@ This session has the **sharpest licence traps in the series**. The best transfor
 
 ## Slide 1 — Title
 
-- **On-slide text:** "How LLMs Work: From Neural Networks to Claude" · Session 9 of 15 · Block: *Do it* · AI Training Series.
+- **On-slide text:** "How LLMs Work: From Neural Networks to Claude" · Session 9 of 16 · Block: *Do it* · AI Training Series.
 - **Speaker notes:** This is the bridge session. Session 6 gave you a neural network; Session 1 gave you "autocomplete on steroids." Today we connect them — you'll see the actual machinery, and by the last slide you'll understand *mechanically* why it hallucinates. Flag the pre-reading: if anyone watched 3Blue1Brown, say so now, they'll enjoy this more.
 - **Visual:** Series title layout.
 - **Source/licence:** none.

@@ -1,0 +1,11 @@
+flowchart TD
+    S["Vendor quotes a<br/>headline accuracy number"] --> Q1{"Sensitivity, precision,<br/>or accuracy?"}
+    Q1 -->|"Won't say"| NO["Walk away"]
+    Q1 -->|"Identified"| Q2{"Full confusion matrix,<br/>raw counts?"}
+    Q2 -->|"No"| NO
+    Q2 -->|"Yes"| Q3{"Their base rate vs.<br/>my base rate?"}
+    Q3 -->|"Similar"| OK["Their precision ≈ your precision.<br/>Proceed to a pilot."]
+    Q3 -->|"Theirs is higher"| BAYES["Recompute precision<br/>at YOUR base rate"]
+    BAYES --> Q4{"Can you afford that<br/>false-alarm volume,<br/>every day, forever?"}
+    Q4 -->|"No"| NARROW["Narrow the population,<br/>stage the test, or don't buy"]
+    Q4 -->|"Yes"| PILOT["Pilot — and measure<br/>precision on YOUR data"]

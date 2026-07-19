@@ -13,7 +13,7 @@ Slide-by-slide spec for the deck-builder. Build per `../../powerpoint_instructio
 
 ## Slide 1 — Title
 
-- **On-slide text:** "Risk I: When AI Is Confidently Wrong" · Session 13 of 15 · Block: *Risk it* · AI Training Series.
+- **On-slide text:** "Risk I: When AI Is Confidently Wrong" · Session 13 of 16 · Block: *Risk it* · AI Training Series.
 - **Speaker notes:** This session is about being fooled by a true number. Three parts: hallucination and what actually mitigates it; why your metric lies; and a vendor role-play that ends in a buy/don't-buy decision. Nothing today requires code. The last part is the one you will use within the month.
 - **Visual:** Series title layout.
 - **Source/licence:** none.

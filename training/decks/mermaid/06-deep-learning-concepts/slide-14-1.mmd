@@ -1,0 +1,4 @@
+flowchart LR
+    P["prediction 0.57"] --> D["gap = pred - truth"]
+    T["truth 1"] --> D
+    D --> SQ["square it"] --> AVG["average"] --> L["LOSS"]

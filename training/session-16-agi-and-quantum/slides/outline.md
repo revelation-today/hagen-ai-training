@@ -11,7 +11,7 @@ Deck spec for the deck-builder. Build per `../../powerpoint_instructions.md` (la
 ---
 
 ## Slide 1 — Title
-- **On-slide:** "What Is AGI, and an Outlook on Quantum" · Session 16 of 15 · Block: Judge It · *"The series closer."*
+- **On-slide:** "What Is AGI, and an Outlook on Quantum" · Session 16 of 16 · Block: Judge It · *"The series closer."*
 - **Speaker notes:** Last session. Two horizon topics, one method — ask what the evidence shows and notice who benefits from the claim. Flag up front that the quantum segment at the end is the most speculative content in the whole series, and that we will label it as such. Promise the room a straight answer on both.
 - **Visual:** Series master title layout. Mark "15 / 15" prominently — the room should feel this is the close.
 - **Source/licence:** none.

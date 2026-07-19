@@ -1,0 +1,8 @@
+flowchart LR
+    subgraph CL["Classical software"]
+      D1["Data"] --> P1["Rules a human wrote"] --> A1["Answer"]
+    end
+    subgraph ML["Machine learning"]
+      D2["Data"] --> P2["Learning algorithm"]
+      A2["Answers (labelled)"] --> P2 --> R2["Rules = a model"]
+    end

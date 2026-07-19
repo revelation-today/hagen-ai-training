@@ -18,7 +18,7 @@ Slide-by-slide spec for the deck-builder. Build per `../../powerpoint_instructio
 
 ## Slide 1 — Title
 
-- **On-slide text:** "Risk II: Security, Privacy & Mitigation in Practice" · Session 14 of 15 · Block: *Use it responsibly* · AI Training Series.
+- **On-slide text:** "Risk II: Security, Privacy & Mitigation in Practice" · Session 14 of 16 · Block: *Use it responsibly* · AI Training Series.
 - **Speaker notes:** Session 13 was about failures that come from what this technology *is*. Today is about failures that come from how you *deploy* it. One line of framing before we start, and say it plainly: this is defensive material. We look at how these systems break so we can gate them properly. Nothing here is an attack recipe.
 - **Visual:** Series title layout.
 - **Source/licence:** none.

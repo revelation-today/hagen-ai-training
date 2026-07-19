@@ -1,0 +1,12 @@
+flowchart TD
+    F["A real failure"] --> C["Write it as a CASE:<br/>input + what must be true"]
+    C --> S[("Test set: 10-20 cases,<br/>in the repo")]
+    P["Prompt v_n"] --> R["Run all cases"]
+    S --> R
+    R --> G["Grade: rules -> judge -> human"]
+    G --> M["Pass rate + which failed"]
+    M --> D{"Good enough?"}
+    D -->|no| E["Diagnose -> ONE change"]
+    E --> R
+    D -->|yes| SHIP["Ship. Record pass rate<br/>AND the model ID."]
+    SHIP -.->|"model changes OR<br/>new failure in the wild"| R

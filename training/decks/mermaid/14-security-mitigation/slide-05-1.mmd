@@ -1,0 +1,6 @@
+flowchart LR
+    S["System prompt<br/>(your instructions)"] --> C["One concatenated<br/>token stream"]
+    U["User input<br/>(untrusted)"] --> C
+    D["Retrieved document / email /<br/>ticket / log (untrusted)"] --> C
+    C --> M["Model:<br/>predicts the next token"]
+    M --> O["Output"]

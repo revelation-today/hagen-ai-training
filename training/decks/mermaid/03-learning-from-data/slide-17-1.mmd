@@ -1,0 +1,7 @@
+flowchart TD
+      START["A prediction problem. What is the data like?"] --> Q1{"Structured / tabular?"}
+      Q1 -->|Yes| SIMPLE["Simple model first"]
+      Q1 -->|"No — perceptual/fuzzy"| NN["Neural network likely justified"]
+      SIMPLE --> Q2{"Meets the requirement?"}
+      Q2 -->|Yes| DONE["Ship it — cheaper, auditable"]
+      Q2 -->|No| NN

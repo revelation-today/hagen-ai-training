@@ -14,7 +14,7 @@ Licence quick-reference for this deck:
 
 ## Slide 1 — Title
 
-- **On-slide text:** "The Vocabulary, and the Cost Meter" · Session 2 of 15 · Block: *Understand it* · AI Training Series.
+- **On-slide text:** "The Vocabulary, and the Cost Meter" · Session 2 of 16 · Block: *Understand it* · AI Training Series.
 - **Speaker notes:** Two halves today: the words everyone uses loosely, and the bill nobody forecasts correctly. They connect through one term — the token — which turns out to be the unit of reading, writing, and billing all at once. This is the reference session; people come back to it.
 - **Visual:** Series title layout.
 - **Source/licence:** none.

@@ -10,6 +10,8 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 
-# Generated decks (build artefacts — see training/powerpoint_instructions.md)
+# Stray decks anywhere EXCEPT the generated set, which is versioned so the
+# course can be delivered without running the build.
 *.pptx
 *.potx
+!training/decks/*.pptx

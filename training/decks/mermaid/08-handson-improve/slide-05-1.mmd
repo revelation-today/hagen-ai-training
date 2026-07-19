@@ -1,0 +1,3 @@
+flowchart LR
+    U["UNDERFIT<br/>high bias<br/>train low, test low"] -->|add capacity| G["GOOD FIT<br/>test ≈ train, both high"]
+    G -->|"too much capacity<br/>/ epochs / too little data"| O["OVERFIT<br/>high variance<br/>train ~100%, test lower"]

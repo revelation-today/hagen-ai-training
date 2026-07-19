@@ -1,0 +1,12 @@
+flowchart TD
+    F["Bad output"] --> D{"Which category?"}
+    D --> C1["1 MISSING CONTEXT"]
+    D --> C2["2 AMBIGUOUS TASK"]
+    D --> C3["3 UNCONSTRAINED OUTPUT"]
+    D --> C4["4 CAPABILITY / MODEL"]
+    D --> C5["5 WRONG APPROACH"]
+    C1 --> FIX["Change ONE thing,<br/>re-run SAME input"]
+    C2 --> FIX
+    C3 --> FIX
+    C4 --> FIX
+    C5 --> STOP["Stop prompting.<br/>Retrieval, code, or a human."]

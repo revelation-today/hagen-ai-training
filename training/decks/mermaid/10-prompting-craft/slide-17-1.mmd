@@ -1,0 +1,4 @@
+flowchart TD
+    A["1. Ask for JSON"] -->|"a request"| A1["Fails on fences,<br/>preamble, truncation"]
+    B["2. Constrained decoding"] -->|"a guarantee"| B1["Invalid JSON is<br/>unrepresentable"]
+    C["3. Tool / function calling"] -->|"guarantee + choice"| C1["Model decides whether<br/>and which to call"]

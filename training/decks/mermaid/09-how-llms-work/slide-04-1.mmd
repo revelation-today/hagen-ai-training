@@ -1,0 +1,4 @@
+flowchart LR
+      A["Text"] --> B["Tokens"] --> C["Embeddings<br/>+ position"] --> D["Transformer blocks × N<br/><b>attention + feed-forward</b>"] --> E["Logits"] --> F["Softmax ÷ T"] --> G["Sample<br/>one token"]
+      G -.->|"append, run again"| B
+      style D fill:#d6eaf8,stroke:#2874a6

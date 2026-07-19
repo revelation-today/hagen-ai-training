@@ -1,0 +1,10 @@
+flowchart TD
+    P["PROJECT<br/>conventions, glossary,<br/>standing instructions"] --> C["Conversation"]
+    SP["YOUR SCRATCHPAD<br/>prompt version, discovered<br/>context, failures"] --> C
+    I["Today's input"] --> C
+    C --> A["ARTIFACT — the deliverable"]
+    A --> R{"Human review:<br/>every factual claim"}
+    R -->|good| OUT["Ships"]
+    R -->|"found a failure"| SP
+    SP -.->|"recurring context"| P
+    SP -.->|"failures"| TS[("Prompt test set")]

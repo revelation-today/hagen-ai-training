@@ -1,0 +1,7 @@
+flowchart LR
+    subgraph "Direct answer"
+      Q1["Question"] --> A1["Answer"]
+    end
+    subgraph "With reasoning"
+      Q2["Question"] --> R["Reasoning tokens"] --> A2["Answer conditioned<br/>on the reasoning"]
+    end

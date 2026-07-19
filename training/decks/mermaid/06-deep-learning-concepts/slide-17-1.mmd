@@ -1,0 +1,8 @@
+flowchart TD
+    INIT["Random weights"] --> FWD["FORWARD -> predictions"]
+    FWD --> LOSS["LOSS"]
+    LOSS --> BACK["BACKPROP -> blame"]
+    BACK --> GD["GRADIENT DESCENT -> nudge weights"]
+    GD --> R{"Improving?"}
+    R -->|yes| FWD
+    R -->|no| TRAINED["Trained network"]

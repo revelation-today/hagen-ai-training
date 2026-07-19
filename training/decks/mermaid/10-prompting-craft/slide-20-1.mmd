@@ -1,0 +1,7 @@
+flowchart TD
+    IN["Request"] --> S["Small model,<br/>engineered prompt"]
+    S --> V{"Valid + confident?"}
+    V -->|"yes ~85%"| OUT["Result"]
+    V -->|"no"| F["Frontier model"]
+    F --> OUT
+    OUT --> LOG["Log tokens, cost,<br/>prompt version"]

@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant X as Attacker
+    participant R as Content store
+    participant A as Your LLM app
+    participant T as Tool / API
+    X->>R: Plants instructions in content
+    Note over R: Weeks pass. No attack in progress.
+    A->>R: Retrieves (RAG / summariser / agent)
+    A->>T: Acts on the attacker's instruction
+    T-->>X: Consequence lands

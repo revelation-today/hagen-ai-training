@@ -1,0 +1,5 @@
+flowchart LR
+    B["1. BUILD<br/>Sequential + Dense"] --> C["2. COMPILE<br/>loss + optimizer + metrics"]
+    C --> F["3. FIT<br/>epochs + batch_size"]
+    F --> E["4. EVALUATE<br/>on unseen data"]
+    E -.->|"change ONE thing, re-run"| B

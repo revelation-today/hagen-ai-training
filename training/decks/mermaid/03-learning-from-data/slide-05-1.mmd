@@ -1,0 +1,7 @@
+flowchart TD
+      S["Model with random settings"] --> P["Predict on a batch of training examples"]
+      P --> C["Compare to true labels → measure error"]
+      C --> Q{"Still improving?"}
+      Q -->|Yes| U["Adjust settings a little"]
+      U --> P
+      Q -->|No| D["Freeze settings = trained model"]

@@ -1,0 +1,4 @@
+flowchart LR
+    A["Take a batch<br/>(32 rows)"] --> B["Predict"] --> C["Measure LOSS"]
+    C --> D["Assign blame<br/>to each weight"] --> E["Optimizer nudges<br/>all 16 weights"]
+    E -->|next batch| A

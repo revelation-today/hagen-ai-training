@@ -1,0 +1,8 @@
+flowchart TD
+    S["A task"] --> Q1{"Who answers<br/>if it's wrong?"}
+    Q1 -->|"Nobody"| A["AI does it.<br/>Spot-check."]
+    Q1 -->|"You"| Q2{"Verify cheaply?"}
+    Q2 -->|"No"| H["You do it."]
+    Q2 -->|"Yes"| Q3{"Need a guarantee?"}
+    Q3 -->|"Yes"| DET["Deterministic tool.<br/>AI explains it."]
+    Q3 -->|"No"| AUG["AI drafts.<br/>You decide and own."]

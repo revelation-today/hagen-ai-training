@@ -1,0 +1,9 @@
+flowchart LR
+    T["Raw timeline"] --> M["Model"]
+    M --> E["ESTABLISHED"]
+    M --> I["INFERRED"]
+    M --> U["UNKNOWN"]
+    E --> H{"Human checks<br/>E against sources,<br/>challenges each I"}
+    I --> H
+    U --> H
+    H --> P["Published summary"]

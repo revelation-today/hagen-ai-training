@@ -1,0 +1,7 @@
+flowchart TD
+    U["Unsupervised (no labels)"] --> C["Clustering<br/>group similar rows"]
+    U --> D["Dim. reduction<br/>fewer columns"]
+    C --> K["K-means"]
+    C --> DB["DBSCAN"]
+    D --> P["PCA (compute)"]
+    D --> T["t-SNE / UMAP (see)"]

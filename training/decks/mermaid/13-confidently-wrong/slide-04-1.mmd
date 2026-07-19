@@ -1,0 +1,6 @@
+flowchart LR
+    P["Prompt"] --> R{"Densely covered<br/>pattern space?"}
+    R -->|"Dense — interpolation"| G["Fluent output<br/>usually correct"]
+    R -->|"Sparse — extrapolation"| H["Fluent output<br/>possibly invented"]
+    G --> S["Identical confidence,<br/>no warning label"]
+    H --> S

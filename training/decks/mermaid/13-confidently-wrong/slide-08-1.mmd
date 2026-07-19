@@ -1,0 +1,8 @@
+flowchart TD
+    A["Model accuracy rises<br/>99% correct"] --> B["Reviewer sees a long<br/>run of correct outputs"]
+    B --> C1["Expectation shifts:<br/>'this is usually right'"]
+    B --> C2["Review time per item<br/>falls to near zero"]
+    B --> C3["Errors become subtle —<br/>the easy ones were fixed first"]
+    C1 --> D["Detection probability<br/>collapses"]
+    C2 --> D
+    C3 --> D

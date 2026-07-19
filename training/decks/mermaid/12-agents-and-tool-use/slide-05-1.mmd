@@ -1,0 +1,8 @@
+flowchart TD
+    U["User request"] --> C["Context:<br/>goal + tool schemas + trace so far"]
+    C --> M["Model call"]
+    M --> D{"Output is what?"}
+    D -->|"Tool call"| T["YOUR CODE executes the tool"]
+    T --> O["Observation appended to trace"]
+    O --> C
+    D -->|"Final answer"| A["Answer"]

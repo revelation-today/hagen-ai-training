@@ -8,7 +8,7 @@ Licence quick-reference for this deck: all code/figures are **scikit-learn (BSD-
 
 ## Slide 1 — Title
 
-- **On-slide text:** "Methods I: Learning From Data" · Session 3 of 15 · Block: Methods · AI Training Series.
+- **On-slide text:** "Methods I: Learning From Data" · Session 3 of 16 · Block: Methods · AI Training Series.
 - **Speaker notes:** This is the foundation for the next four sessions. Trees, forests, deep learning, LLMs all sit on the ideas we cover today, so we do them once, here. It's a concept session — one short code illustration, no full lab.
 - **Visual:** Series title layout. No derived content.
 - **Source/licence:** none.

@@ -1,0 +1,6 @@
+flowchart TD
+    S["Random weights"] --> F["Feel the slope (gradient)"]
+    F --> STEP["Step downhill: w = w - stepsize x slope"]
+    STEP --> CHK{"Still downhill?"}
+    CHK -->|yes| F
+    CHK -->|flat| DONE["Valley: loss low"]

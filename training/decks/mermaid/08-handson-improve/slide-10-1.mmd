@@ -1,0 +1,8 @@
+flowchart TD
+    P["A prediction"] --> A{"Actual?"}
+    A -->|Positive| AP{"Predicted?"}
+    A -->|Negative| AN{"Predicted?"}
+    AP -->|Pos| TP["TRUE POSITIVE"]
+    AP -->|Neg| FN["FALSE NEGATIVE (missed)"]
+    AN -->|Pos| FP["FALSE POSITIVE (false alarm)"]
+    AN -->|Neg| TN["TRUE NEGATIVE"]

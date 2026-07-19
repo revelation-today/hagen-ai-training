@@ -1,0 +1,8 @@
+flowchart TD
+    D["1. Define the objective"] --> P["2. Draft a simple prompt"]
+    P --> T["3. Test on real inputs"]
+    T --> R{"4. Good enough?"}
+    R -->|"no"| RF["5. Refine ONE thing"]
+    RF --> T
+    R -->|"yes"| F["6. Evaluate on held-out<br/>cases, freeze, version"]
+    F -.->|"inputs and models drift"| D

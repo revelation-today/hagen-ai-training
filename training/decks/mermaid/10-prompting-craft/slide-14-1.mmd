@@ -1,0 +1,5 @@
+flowchart TD
+    S["SYSTEM: rules, contract, persona<br/>(static -> cacheable)"] --> M["Model"]
+    U["USER: this request +<br/>&lt;data&gt; untrusted &lt;/data&gt;"] --> M
+    M --> O["Output"]
+    U -.->|"Session 14 attacks<br/>this boundary"| X["injection risk"]

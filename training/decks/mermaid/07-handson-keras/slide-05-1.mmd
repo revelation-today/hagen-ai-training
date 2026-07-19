@@ -1,0 +1,5 @@
+flowchart LR
+    A["1,345 rows"] --> B["TRAIN ~896<br/>the model learns here"]
+    A --> C["TEST ~449<br/>hidden until the end"]
+    B --> M["fit()"] --> E["evaluate()"]
+    C --> E

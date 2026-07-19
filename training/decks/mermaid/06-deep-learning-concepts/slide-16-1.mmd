@@ -1,0 +1,4 @@
+flowchart RL
+    ERR["Output error"] --> OUT["Output weights: your share"]
+    OUT --> HID["Hidden weights: smaller, indirect share"]
+    HID --> UPD["Every weight knows which way to move"]

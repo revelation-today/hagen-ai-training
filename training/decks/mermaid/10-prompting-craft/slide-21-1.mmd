@@ -1,0 +1,8 @@
+flowchart TD
+    P["prompt v7 in git"] --> R["Runner"]
+    E["eval set: 20-50 real cases"] --> R
+    R --> S["pass rate + cost + tokens"]
+    S --> G{"Regression?"}
+    G -->|"yes"| BLOCK["CI fails"]
+    G -->|"no"| PROD["Production"]
+    PROD -->|"failures become<br/>new cases"| E

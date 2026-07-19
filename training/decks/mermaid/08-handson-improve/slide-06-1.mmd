@@ -1,0 +1,7 @@
+flowchart TD
+    S["Train high, val lower"] --> D{"More data available?"}
+    D -->|Yes| M["MORE DATA (strongest)"]
+    D -->|No| C["DROPOUT / shrink net"]
+    M --> E["EARLY STOPPING (always on)"]
+    C --> E
+    E --> R["Re-measure the gap"]

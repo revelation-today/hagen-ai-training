@@ -1,0 +1,8 @@
+flowchart LR
+    R["R"] --> H1 & H2 & H3
+    G["G"] --> H1 & H2 & H3
+    B["B"] --> H1 & H2 & H3
+    H1["h1 relu"] --> O
+    H2["h2 relu"] --> O
+    H3["h3 relu"] --> O
+    O["out sigmoid"] --> P["P(dark)"]

@@ -1,0 +1,8 @@
+flowchart TD
+    P["A gap / unknown"] --> M["Complete the pattern:<br/>most plausible fill"]
+    M --> Q{"Evidence supports it?"}
+    Q -->|Yes| G["Useful inference"]
+    Q -->|"No — but no check"| B["Confident error"]
+    B --> H["Hallucination"]
+    B --> F["False memory"]
+    B --> J["Prejudice"]

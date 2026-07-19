@@ -1,0 +1,10 @@
+flowchart TD
+    H["'We have a human in the loop'"] --> Q1{"Qualified in the<br/>subject matter?"}
+    Q1 -->|No| T["Theatre"]
+    Q1 -->|Yes| Q2{"Source of truth<br/>available at review?"}
+    Q2 -->|No| T
+    Q2 -->|Yes| Q3{"Time per item ×<br/>items per day fits<br/>a working day?"}
+    Q3 -->|No| T
+    Q3 -->|Yes| Q4{"Measured on catch rate,<br/>not throughput?"}
+    Q4 -->|No| T
+    Q4 -->|Yes| C["A real control.<br/>Now sample it."]

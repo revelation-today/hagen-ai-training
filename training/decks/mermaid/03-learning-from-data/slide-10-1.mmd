@@ -1,0 +1,7 @@
+flowchart LR
+      ALL["All labelled data"] --> TR["Training ~70%"]
+      ALL --> VA["Validation ~15%"]
+      ALL --> TE["Test ~15%"]
+      TR --> U1["Fit the settings"]
+      VA --> U2["Tune the choices"]
+      TE --> U3["Final report card — once"]

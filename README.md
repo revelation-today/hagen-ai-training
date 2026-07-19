@@ -12,6 +12,7 @@ Internal AI training course for a Qualcomm team (release management, problem man
 |---|---|
 | [`training/`](training/) | **The course.** 16 session folders, each with self-study reading, a slide spec, exercises, and sources. |
 | [`training/README.md`](training/README.md) | Course index and session list — **start here**. |
+| [`training/GLOSSARY.md`](training/GLOSSARY.md) | Every key term and abbreviation, with a pointer to the session that teaches it. |
 | [`training/powerpoint_instructions.md`](training/powerpoint_instructions.md) | How to build the 16 PowerPoint decks from the session outlines. |
 | [`training/_TEMPLATE/SESSION_STRUCTURE.md`](training/_TEMPLATE/SESSION_STRUCTURE.md) | Authoring spec every session follows. |
 | [`training_proposal.md`](training_proposal.md) | Why the course is shaped this way: goal mapping, source analysis, effort estimates. |

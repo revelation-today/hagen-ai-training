@@ -14,6 +14,7 @@ flowchart TD
     root["output/training/"]
     root --> RM["README.md — this index"]
     root --> PPT["powerpoint_instructions.md — deck build spec"]
+    root --> GL["GLOSSARY.md — every term, one lookup"]
     root --> TPL["_TEMPLATE/SESSION_STRUCTURE.md — authoring spec"]
     root --> S["session-NN-slug/ ×16"]
     S --> SR["README.md — cover sheet"]
@@ -24,6 +25,7 @@ flowchart TD
 ```
 
 - **Start here:** each session's `README.md` is its entry point (objectives, agenda, prerequisites).
+- **Looking up a term?** [`GLOSSARY.md`](GLOSSARY.md) — every abbreviation and key term with a one-line definition and a pointer to the session that teaches it.
 - **To learn the material:** read that session's `content/` files in numeric order.
 - **To build the deck:** read [`powerpoint_instructions.md`](powerpoint_instructions.md), then the session's `slides/outline.md`.
 - **To run a lab or the Q&A:** see the session's `exercises/`.

@@ -1,0 +1,6 @@
+flowchart TD
+    Q{"Can you easily<br/>verify it?"}
+    Q -->|Yes| OK["Good use"]
+    Q -->|No| Q2{"Does truth<br/>matter here?"}
+    Q2 -->|No| OK2["Fine — truth isn't the point"]
+    Q2 -->|Yes| D["Danger — need an expert<br/>or a grounded source"]

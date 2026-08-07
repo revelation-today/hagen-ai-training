@@ -184,7 +184,8 @@ def accent_rule(slide, t=Inches(1.28), l=Inches(0.7), w=Inches(1.1)):
 
 
 def footer(slide, session_no, source):
-    left = f"Session {session_no}  ·  AI Training Series"
+    left = (f"Session {session_no}  ·  AI Training Series" if session_no
+            else "AI Training Series")
     textbox(slide, Inches(0.7), Inches(6.92), Inches(7.5), Inches(0.4),
             left, 11, MUTED)
     # Only tag slides whose content is actually *derived* from a source. Clean
@@ -248,7 +249,11 @@ def set_notes(slide, *chunks):
 # ------------------------------------------------------------------ build ---
 def build_deck(session_dir: pathlib.Path):
     m = re.match(r"session-(\d+)-(.*)", session_dir.name)
-    no, slug = int(m.group(1)), m.group(2)
+    if m:
+        no, slug = int(m.group(1)), m.group(2)
+    else:
+        # standalone decks (e.g. overview-30min): no session number
+        no, slug = 0, session_dir.name
     outline = session_dir / "slides" / "outline.md"
     if not outline.exists():
         return None
@@ -257,13 +262,13 @@ def build_deck(session_dir: pathlib.Path):
     # session title from the session README's H1
     readme = (session_dir / "README.md").read_text(encoding="utf-8")
     st = re.search(r"^#\s*(.+)$", readme, re.M)
-    session_title = st.group(1).replace(f"Session {no} — ", "").strip() if st else slug
+    session_title = re.sub(r"^Session\s+\d+\s+[—-]\s+", "", st.group(1)).strip() if st else slug
 
     prs = Presentation()
     prs.slide_width, prs.slide_height = SLIDE_W, SLIDE_H
     blank = prs.slide_layouts[6]
 
-    mmd_dir = MMD / f"{no:02d}-{slug}"
+    mmd_dir = MMD / (f"{no:02d}-{slug}" if no else slug)
     diagrams = 0
 
     for i, s in enumerate(slides):
@@ -281,9 +286,12 @@ def build_deck(session_dir: pathlib.Path):
             textbox(slide, Inches(0.9), Inches(2.3), Inches(11.5), Inches(1.6),
                     session_title, 40, PRIMARY, bold=True)
             accent_rule(slide, t=Inches(4.05), l=Inches(0.9))
+            subtitle = (f"Session {no} of 16  ·  {BLOCK_OF.get(no,'')}"
+                        if no else "Standalone intro talk")
+            duration = ("AI Training Series  ·  45 min + 15 min Q&A" if no
+                        else "AI Training Series  ·  ~30 min + Q&A")
             textbox(slide, Inches(0.9), Inches(4.35), Inches(11.5), Inches(0.9),
-                    [f"Session {no} of 16  ·  {BLOCK_OF.get(no,'')}",
-                     "AI Training Series  ·  45 min + 15 min Q&A"], 17, MUTED)
+                    [subtitle, duration], 17, MUTED)
         else:
             textbox(slide, Inches(0.7), Inches(0.55), Inches(11.9), Inches(0.8),
                     title, 28, PRIMARY, bold=True)
@@ -318,7 +326,7 @@ def build_deck(session_dir: pathlib.Path):
         set_notes(slide, notes, extra)
 
     OUT.mkdir(parents=True, exist_ok=True)
-    path = OUT / f"{no:02d}-{slug}.pptx"
+    path = OUT / (f"{no:02d}-{slug}.pptx" if no else f"{slug}.pptx")
     prs.save(path)
     return path, len(slides), diagrams
 
@@ -332,7 +340,7 @@ def clean_md_notes(s: str) -> str:
 
 
 if __name__ == "__main__":
-    dirs = sorted(ROOT.glob("session-*"))
+    dirs = sorted(ROOT.glob("session-*")) + sorted(ROOT.glob("overview-*"))
     total_slides = total_diagrams = 0
     print(f"{'deck':<34} {'slides':>7} {'diagrams':>9}")
     print("-" * 53)

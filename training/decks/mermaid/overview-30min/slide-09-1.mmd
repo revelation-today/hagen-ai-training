@@ -1,0 +1,6 @@
+flowchart LR
+    P["Prompt"] --> R{"Well covered by<br/>training data?"}
+    R -->|"Yes — dense"| G["Fluent, usually correct"]
+    R -->|"No — sparse"| H["Fluent, possibly invented"]
+    G --> S["Identical confidence.<br/>No warning label."]
+    H --> S

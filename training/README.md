@@ -32,6 +32,10 @@ flowchart TD
 
 ---
 
+## Standalone intro talk
+
+Need a single 30-minute overview rather than the full course? [`overview-30min/`](overview-30min/) is a self-contained taster — what AI is, how it works, hallucination, working with it, and good prompts — with its own [`talk.md`](overview-30min/talk.md) and a generated deck at [`decks/overview-30min.pptx`](decks/overview-30min.pptx).
+
 ## The 16 sessions
 
 | # | Session | Block | Goals (from brief) | Hands-on |

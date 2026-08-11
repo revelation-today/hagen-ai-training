@@ -1,16 +1,16 @@
-# AI in 30 Minutes
+# AI in 35 Minutes
 
-A single 30-minute presentation that stands on its own, condensed from the 16-session series. For a first exposure, a lunch-and-learn, a kickoff before the full course, or anyone who needs the essentials in one sitting.
+A single 35-minute presentation that stands on its own, condensed from the 16-session series. For a first exposure, a lunch-and-learn, a kickoff before the full course, or anyone who needs the essentials in one sitting.
 
 **Audience:** anyone at Qualcomm — technical or not. Assumes nothing.
-**Runs:** ~30 minutes talking + ~10 minutes questions.
+**Runs:** ~35 minutes talking + ~10 minutes questions.
 **Language:** English. Any code is Python.
 
 ---
 
 ## What it covers
 
-The five things the requester asked for, in the order that builds:
+The essentials, in the order that builds — the five things asked for, plus where the field is heading next:
 
 ```mermaid
 flowchart LR
@@ -27,10 +27,11 @@ flowchart LR
 | 2 | What AI is — learning from examples, not rules | 3–7 |
 | 3 | How it basically works — autocomplete on steroids | 7–12 |
 | 4 | Hallucination — why confident and wrong look identical | 12–18 |
-| 5 | How to work with it — the one decision rule | 18–21 |
-| 6 | Writing good prompts — anatomy + before/after | 21–26 |
-| 7 | Agents & skills — when the model acts, not just answers | 26–29 |
-| 8 | Takeaways | 29–30 |
+| 5 | How to work with it — the decision rule + do's & don'ts + live demo | 18–24 |
+| 6 | Writing good prompts — anatomy + before/after | 24–29 |
+| 7 | Agents — when the model acts, not just answers | 29–32 |
+| 8 | Skills — teaching it your way, once | 32–34 |
+| 9 | Takeaways | 34–35 |
 | — | Q&A | +10 |
 
 ## Files

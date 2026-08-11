@@ -1,8 +1,8 @@
-# Slides — AI in 30 Minutes (standalone intro)
+# Slides — AI in 35 Minutes (standalone intro)
 
 Slide-by-slide spec. Build per `../../powerpoint_instructions.md` (layout, palette, type, accessibility, licence footers). Speaker notes go in the Notes pane, never on the slide. Every headline is a claim, not a label.
 
-**Deck size:** 1 title + 1 agenda + 13 content + 1 takeaways + 1 Q&A/resources = **17 slides**, ~30 min (≈2 min/slide; the demo and agents slides run a little longer, the hook and vocabulary slides a little shorter).
+**Deck size:** 1 title + 1 agenda + 15 content + 1 takeaways + 1 Q&A/resources = **19 slides**, ~35 min (≈2 min/slide; the demo and the two agents/skills slides run a little longer, the hook and vocabulary slides a little shorter).
 
 **Licence quick-reference:** all diagrams, tables and examples here are **original to this course** and safe to render. The only named external source is Maynez et al. 2020 (CC BY 4.0, SLIDE-SAFE) for the hallucination definition, if you show it. 3Blue1Brown and any vendor blogs are LINK-ONLY — mention, don't embed.
 
@@ -10,7 +10,7 @@ Slide-by-slide spec. Build per `../../powerpoint_instructions.md` (layout, palet
 
 ## Slide 1 — Title
 
-- **On-slide text:** "AI in 30 Minutes" · A plain-English introduction · AI Training Series.
+- **On-slide text:** "AI in 35 Minutes" · A plain-English introduction · AI Training Series.
 - **Speaker notes:** Set expectations: no maths, no code, no jargon left undefined. By the end you'll understand what these tools are, why they sometimes lie, and how to get good results. One promise: you'll leave with a single mental model that makes the rest make sense.
 - **Visual:** Title layout.
 - **Source/licence:** none.
@@ -18,7 +18,7 @@ Slide-by-slide spec. Build per `../../powerpoint_instructions.md` (layout, palet
 ## Slide 2 — What we'll cover
 
 - **On-slide text:** What AI is · How it basically works · Why it makes things up · How to work with it · Good prompts · Agents & skills (what's next).
-- **Speaker notes:** Six beats, each builds on the last. Flag that beat three — why it makes things up — is the one that changes how you use these tools; beats four and five are the practical payoff; beat six is where the field is heading and was specifically asked for. Keep the pace up — this is 30 minutes, not 45.
+- **Speaker notes:** Six beats, each builds on the last. Flag that beat three — why it makes things up — is the one that changes how you use these tools; beats four and five are the practical payoff; beat six is where the field is heading and was specifically asked for. Keep the pace up — this is 35 minutes, not 45.
 - **Visual:** ```mermaid
 flowchart LR
     A["What AI is"] --> B["How it works"] --> C["Why it lies"] --> D["Working with it"] --> E["Good prompts"] --> F["Agents & skills"]
@@ -118,14 +118,21 @@ flowchart TD
 ```
 - **Source/licence:** original.
 
-## Slide 12 — See it happen (live demo)
+## Slide 12 — Daily do's and don'ts
+
+- **On-slide text:** DO: draft, summarise, rephrase, explain, get unstuck · DO: give it the source and ask it to work from THAT · DON'T: paste confidential or personal data · DON'T: trust a fact, number, quote or citation unchecked.
+- **Speaker notes:** The practical heart of "how to work with it." Frame the do's as the sweet spot: transformation tasks where the material is in front of you and errors are visible. Frame the don'ts as the two ways people get burned — data leaving the building, and unverified facts going into something that matters. "Give it the source and ask it to work from that" is the single most useful habit; it makes the output checkable, which is the whole game. This slide is a keeper — tell them to photograph it.
+- **Visual:** Two-column DO / DON'T table (green ticks / grey crosses — pair with the words, not colour alone). Optional callout: "Treat anything you paste as if it's leaving the building."
+- **Source/licence:** original.
+
+## Slide 13 — See it happen (live demo)
 
 - **On-slide text:** Live: ask it for a short bio of someone in the room · Watch it invent plausible, specific, wrong details · Confidence unchanged throughout.
 - **Speaker notes:** DEMO. Ask the model for a biography of a colleague (or yourself) who isn't famous. It will produce fluent, specific, confident, largely fabricated detail. Nothing lands "confident and wrong look identical" harder than watching it happen live. Fallback if no network: a pre-captured screenshot. Keep it light — the point is visceral, not a gotcha.
 - **Visual:** Live browser, or a fallback screenshot of a hallucinated bio with the invented claims circled.
 - **Source/licence:** live demo — nothing embedded.
 
-## Slide 13 — Good output starts with a good brief
+## Slide 14 — Good output starts with a good brief
 
 - **On-slide text:** Most bad output is a prompt problem, not a model problem · Brief it like a fast, well-read new colleague with no context · Role · Task · Context · Format · Example.
 - **Speaker notes:** Reframe prompting as briefing, not incantation. The model is capable but knows nothing about your specific situation, so you supply that. Walk the five parts once. Emphasise that the biggest lever, by far, is specificity plus giving it the actual source material to work from.
@@ -135,31 +142,45 @@ flowchart TD
 ```
 - **Source/licence:** original.
 
-## Slide 14 — Before and after
+## Slide 15 — Before and after
 
 - **On-slide text:** Before: "Write release notes." → invents audience, format, and content · After: role + the 12 real PR titles + "group into Features/Fixes/Known Issues, one sentence each, invent nothing" · Same model. Completely different result.
 - **Speaker notes:** The money slide for the prompting section. Read both aloud. The "after" wins on specificity, real source material (which makes the output checkable), and an explicit "don't invent" instruction. It quietly demonstrates the safety habits too. Then the honest anti-pattern: there is no magic phrase — "act as a world-class expert" does far less than one concrete example.
 - **Visual:** Two-column before/after card. Optional third column: "why it's better".
 - **Source/licence:** original.
 
-## Slide 15 — Next: when the model acts, not just answers
+## Slide 16 — Next: when the model acts, not just answers (agents)
 
-- **On-slide text:** Agent = an LLM given tools + a loop → it can act (search, run code, file a ticket) · Skill = a saved, reusable procedure that teaches it your way of doing a task · Prompt → Skill → Agent · The catch: an agent acts on its output — so "own the output" matters MORE, not less.
-- **Speaker notes:** This is the "where it's going" slide, and it was flagged as important — give it real weight. An agent doesn't just reply; it uses tools in a Think–Act–Observe loop until the job is done. A skill is a written procedure the model reuses, so it is consistent and expert at YOUR tasks rather than generically capable. Walk the prompt→skill→agent ladder. Then the safety line, which is the whole point: a wrong chatbot answer is an embarrassment you catch on reading; a wrong answer from an agent that already filed the ticket or ran the command is an incident. Start narrow, keep a human gate. The full course goes deep — Sessions 11 (skills, MCP, working with Claude) and 12 (agents).
+- **On-slide text:** An agent = an LLM given tools + a loop · It doesn't just reply — it searches, runs code, reads a file, files a ticket, then decides the next step · Think → Act → Observe → repeat · The catch: it acts on its output, so a wrong answer becomes an incident, not just an embarrassment.
+- **Speaker notes:** Agents were flagged as important, so give them a full slide. The shift is from a model that *answers* to one that *acts*. Walk the Think–Act–Observe loop concretely with a task from this room — e.g. "read the failed pipeline log, find the likely cause, and open a draft ticket." Genuinely powerful. Then land the safety point hard, because it's the whole reason it matters: a wrong chatbot answer is caught when you read it; a wrong answer from an agent that already ran the command or filed the ticket is an incident. So everything from the "own the output" rule matters *more* with agents, not less. Start them on narrow, well-bounded tasks with a human gate.
+- **Visual:** ```mermaid
+flowchart LR
+    G["Goal"] --> TH["Think:<br/>next step?"]
+    TH --> AC["Act:<br/>use a tool"]
+    AC --> OB["Observe:<br/>read result"]
+    OB --> TH
+    OB --> D["Done"]
+```
+- **Source/licence:** original.
+
+## Slide 17 — Skills: teaching it your way, once
+
+- **On-slide text:** A skill = a saved, reusable procedure that teaches the model how you do a task · Prompt = a one-off instruction · Skill = a written how-to it reuses every time · Skills make chats AND agents consistent and expert at YOUR work, not just generically capable · Prompt → Skill → Agent.
+- **Speaker notes:** The complement to agents. A prompt is one-off; you re-explain every time. A skill is a saved procedure — "here's exactly how we write release notes / triage an incident" — that the model loads whenever it's relevant. That's what turns a generically capable model into one that does *your* tasks *your* way, and it's what makes an agent reliable rather than improvisational. Walk the ladder: prompt is asking a colleague one thing; a skill is the team's how-to guide they follow every time; an agent is delegating a whole task. For an intro, the takeaway is awareness — agents and skills are how AI moves from answering questions to doing tasks. Sessions 11 (skills, working with Claude) and 12 (agents) go deep.
 - **Visual:** ```mermaid
 flowchart LR
     P["Prompt<br/>one-off instruction"] --> S["Skill<br/>saved reusable procedure"] --> A["Agent<br/>acts with tools in a loop"]
 ```
 - **Source/licence:** original.
 
-## Slide 16 — Take away six things
+## Slide 18 — Take away six things
 
 - **On-slide text:** 1. Learns from examples, not rules · 2. Autocomplete on steroids — doesn't look things up · 3. Hallucination is structural; confidence ≠ truth · 4. Use where you can verify, or truth doesn't matter — own the output · 5. Good prompts are clear briefs, not magic words · 6. Agents act, skills make them consistent — owning the output matters more once it acts.
 - **Speaker notes:** Recap the arc. Then the one sentence to leave in the room: an LLM is a fluent, confident, sometimes-wrong assistant — brilliant when you can check its work, dangerous when you can't. Treat it accordingly, especially once you let it act. Point to the full course for anyone who wants more.
 - **Visual:** The six points as a numbered list; the one-sentence takeaway boxed at the bottom.
 - **Source/licence:** none.
 
-## Slide 17 — Questions, and where to go next
+## Slide 19 — Questions, and where to go next
 
 - **On-slide text:** Questions? · Full 16-session course · Start with: Session 1, Session 13 (confidently wrong), Sessions 10–12 (prompting, Claude, agents) · Glossary for every term.
 - **Speaker notes:** Open the floor. Common questions to expect: is our data safe to paste (depends — treat as external), will it replace jobs (see Session 15), which tool is best (they're similar; the skill transfers), can it just do the task for me (that's agents — Session 12). Point to the glossary and the full series.

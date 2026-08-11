@@ -1,4 +1,4 @@
-# AI in 30 Minutes
+# AI in 35 Minutes
 
 A standalone introduction: what AI is, how it basically works, why it makes things up, how to work with it, how to write a good prompt, and where it's heading next — agents and skills. Everything here is drawn from the full 16-session course; this is the essentials in one sitting.
 

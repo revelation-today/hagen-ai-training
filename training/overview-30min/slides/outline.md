@@ -2,7 +2,7 @@
 
 Slide-by-slide spec. Build per `../../powerpoint_instructions.md` (layout, palette, type, accessibility, licence footers). Speaker notes go in the Notes pane, never on the slide. Every headline is a claim, not a label.
 
-**Deck size:** 1 title + 1 agenda + 12 content + 1 takeaways + 1 Q&A/resources = **16 slides**, ~30 min (≈2 min/slide, with the demo slide taking longer).
+**Deck size:** 1 title + 1 agenda + 13 content + 1 takeaways + 1 Q&A/resources = **17 slides**, ~30 min (≈2 min/slide; the demo and agents slides run a little longer, the hook and vocabulary slides a little shorter).
 
 **Licence quick-reference:** all diagrams, tables and examples here are **original to this course** and safe to render. The only named external source is Maynez et al. 2020 (CC BY 4.0, SLIDE-SAFE) for the hallucination definition, if you show it. 3Blue1Brown and any vendor blogs are LINK-ONLY — mention, don't embed.
 
@@ -17,11 +17,11 @@ Slide-by-slide spec. Build per `../../powerpoint_instructions.md` (layout, palet
 
 ## Slide 2 — What we'll cover
 
-- **On-slide text:** What AI is · How it basically works · Why it makes things up · How to work with it · How to write a good prompt.
-- **Speaker notes:** Five beats, each builds on the last. Flag that beat three — why it makes things up — is the one that changes how you use these tools, and that beats four and five are the practical payoff.
+- **On-slide text:** What AI is · How it basically works · Why it makes things up · How to work with it · Good prompts · Agents & skills (what's next).
+- **Speaker notes:** Six beats, each builds on the last. Flag that beat three — why it makes things up — is the one that changes how you use these tools; beats four and five are the practical payoff; beat six is where the field is heading and was specifically asked for. Keep the pace up — this is 30 minutes, not 45.
 - **Visual:** ```mermaid
 flowchart LR
-    A["What AI is"] --> B["How it works"] --> C["Why it lies"] --> D["Working with it"] --> E["Good prompts"]
+    A["What AI is"] --> B["How it works"] --> C["Why it lies"] --> D["Working with it"] --> E["Good prompts"] --> F["Agents & skills"]
 ```
 - **Source/licence:** none.
 
@@ -142,16 +142,26 @@ flowchart TD
 - **Visual:** Two-column before/after card. Optional third column: "why it's better".
 - **Source/licence:** original.
 
-## Slide 15 — Take away five things
+## Slide 15 — Next: when the model acts, not just answers
 
-- **On-slide text:** 1. Learns from examples, not rules · 2. Autocomplete on steroids — doesn't look things up · 3. Hallucination is structural; confidence ≠ truth · 4. Use where you can verify, or truth doesn't matter — own the output · 5. Good prompts are clear briefs, not magic words.
-- **Speaker notes:** Recap the arc. Then the one sentence to leave in the room: an LLM is a fluent, confident, sometimes-wrong assistant — brilliant when you can check its work, dangerous when you can't. Treat it accordingly. Point to the full course for anyone who wants more.
-- **Visual:** The five points as a numbered list; the one-sentence takeaway boxed at the bottom.
+- **On-slide text:** Agent = an LLM given tools + a loop → it can act (search, run code, file a ticket) · Skill = a saved, reusable procedure that teaches it your way of doing a task · Prompt → Skill → Agent · The catch: an agent acts on its output — so "own the output" matters MORE, not less.
+- **Speaker notes:** This is the "where it's going" slide, and it was flagged as important — give it real weight. An agent doesn't just reply; it uses tools in a Think–Act–Observe loop until the job is done. A skill is a written procedure the model reuses, so it is consistent and expert at YOUR tasks rather than generically capable. Walk the prompt→skill→agent ladder. Then the safety line, which is the whole point: a wrong chatbot answer is an embarrassment you catch on reading; a wrong answer from an agent that already filed the ticket or ran the command is an incident. Start narrow, keep a human gate. The full course goes deep — Sessions 11 (skills, MCP, working with Claude) and 12 (agents).
+- **Visual:** ```mermaid
+flowchart LR
+    P["Prompt<br/>one-off instruction"] --> S["Skill<br/>saved reusable procedure"] --> A["Agent<br/>acts with tools in a loop"]
+```
 - **Source/licence:** original.
 
-## Slide 16 — Questions, and where to go next
+## Slide 16 — Take away six things
 
-- **On-slide text:** Questions? · Full 16-session course · Start with: Session 1, Session 13 (confidently wrong), Sessions 10–11 (prompting) · Glossary for every term.
-- **Speaker notes:** Open the floor. Common questions to expect: is our data safe to paste (depends — treat as external), will it replace jobs (see Session 15), which tool is best (they're similar; the skill transfers). Point to the glossary and the full series.
+- **On-slide text:** 1. Learns from examples, not rules · 2. Autocomplete on steroids — doesn't look things up · 3. Hallucination is structural; confidence ≠ truth · 4. Use where you can verify, or truth doesn't matter — own the output · 5. Good prompts are clear briefs, not magic words · 6. Agents act, skills make them consistent — owning the output matters more once it acts.
+- **Speaker notes:** Recap the arc. Then the one sentence to leave in the room: an LLM is a fluent, confident, sometimes-wrong assistant — brilliant when you can check its work, dangerous when you can't. Treat it accordingly, especially once you let it act. Point to the full course for anyone who wants more.
+- **Visual:** The six points as a numbered list; the one-sentence takeaway boxed at the bottom.
+- **Source/licence:** none.
+
+## Slide 17 — Questions, and where to go next
+
+- **On-slide text:** Questions? · Full 16-session course · Start with: Session 1, Session 13 (confidently wrong), Sessions 10–12 (prompting, Claude, agents) · Glossary for every term.
+- **Speaker notes:** Open the floor. Common questions to expect: is our data safe to paste (depends — treat as external), will it replace jobs (see Session 15), which tool is best (they're similar; the skill transfers), can it just do the task for me (that's agents — Session 12). Point to the glossary and the full series.
 - **Visual:** Resources + contact layout.
 - **Source/licence:** none.

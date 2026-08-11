@@ -1,6 +1,6 @@
 # AI in 30 Minutes
 
-A standalone introduction: what AI is, how it basically works, why it makes things up, how to work with it, and how to write a good prompt. Everything here is drawn from the full 16-session course; this is the essentials in one sitting.
+A standalone introduction: what AI is, how it basically works, why it makes things up, how to work with it, how to write a good prompt, and where it's heading next — agents and skills. Everything here is drawn from the full 16-session course; this is the essentials in one sitting.
 
 ---
 
@@ -178,7 +178,44 @@ And the honest anti-pattern: **there is no secret word.** "Act as a world-class 
 
 ---
 
-## 7. What to take away
+## 7. When the model acts: agents and skills
+
+So far we've described a model that *answers*. The fastest-moving part of the field is models that *act* — and two words dominate it: **agents** and **skills**.
+
+**An agent is an LLM given tools and a loop.** Instead of just replying, it can search the web, run code, read a file, call an API, file a ticket — then look at the result and decide what to do next. It repeats that cycle until the task is done.
+
+```mermaid
+flowchart LR
+    G["Goal"] --> TH["Think:<br/>what's the next step?"]
+    TH --> AC["Act:<br/>use a tool"]
+    AC --> OB["Observe:<br/>read the result"]
+    OB --> TH
+    OB --> D["Done"]
+```
+
+That's genuinely powerful — an agent can carry out a multi-step job you'd otherwise do by hand. But notice what changed, because it's the whole safety story in one line: **an agent acts on its output.** A wrong answer from a chatbot is an embarrassment you catch when you read it. A wrong answer from an agent that just filed the ticket, ran the command, or sent the email is an *incident*. So everything from section 5 — verify the output, keep a human who can judge it in the loop — matters *more* with agents, not less. Start them on narrow, well-defined tasks with clear limits.
+
+**A skill is a reusable package of instructions that teaches the model how to do a task your way.** A prompt is a one-off instruction you type. A skill is a *saved procedure* — "here's exactly how we write release notes / triage an incident / format a config change" — that the model loads whenever it's relevant, so nobody re-explains it every time. Skills are what make both chats and agents *consistent* and *expert at your specific tasks* rather than generically capable.
+
+The three fit together as a ladder:
+
+```mermaid
+flowchart LR
+    P["<b>Prompt</b><br/>a one-off instruction"] --> S["<b>Skill</b><br/>a saved, reusable procedure"]
+    S --> A["<b>Agent</b><br/>the model acting with tools"]
+```
+
+| | What it is | Everyday analogy |
+|---|---|---|
+| **Prompt** | A single instruction you give the model | Asking a colleague to do one thing |
+| **Skill** | A written procedure the model reuses | The team's how-to guide they follow every time |
+| **Agent** | The model with tools, acting in a loop | A colleague you delegate a whole task to |
+
+For an intro, the takeaway is awareness, not depth: agents and skills are how AI moves from *answering your questions* to *doing your tasks* — impressive, immature, and exactly where the "own the output" rule earns its keep. The full course covers both in depth.
+
+---
+
+## 8. What to take away
 
 If you remember nothing else:
 
@@ -187,8 +224,9 @@ If you remember nothing else:
 3. **Hallucination is structural, not a bug** — and confidence tells you nothing about truth.
 4. **Use it where you can verify, or where truth doesn't matter — and own the output.**
 5. **Good prompts are clear briefs** — role, task, context, format, example. Specificity beats magic words.
+6. **Agents act, skills make them consistent** — and the moment AI acts on its output, "own the output" matters more, not less.
 
-> **The one sentence:** *An LLM is a fluent, confident, sometimes-wrong assistant — brilliant when you can check its work, dangerous when you can't. Treat it accordingly.*
+> **The one sentence:** *An LLM is a fluent, confident, sometimes-wrong assistant — brilliant when you can check its work, dangerous when you can't. Treat it accordingly — especially once you let it act.*
 
 ---
 
